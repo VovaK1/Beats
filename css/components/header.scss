@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.phone-number {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.phone-number__icon--elem {
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+}

@@ -1,0 +1,17 @@
+.btn {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 18px 41px;
+  line-height: 1;
+  border-radius: 100px;
+
+  &--theme--red {
+    background: $red;
+    color: #ffffff;
+
+    &:hover {
+      background: #fff;
+      color: $red;
+    }
+  }
+}

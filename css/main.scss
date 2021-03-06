@@ -1,0 +1,28 @@
+$containerWidth: 910px;
+$baseFontSize: 16px;
+
+//colors
+$red: #E01F3D;
+
+//normalize
+@import url('./layouts/normalize.css');
+
+//fonts 
+@font-face {
+  src: url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap');
+  font-family: 'Alegreya Sans', sans-serif;
+}
+@font-face {
+  src: url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+  font-family:  'Play', sans-serif;
+}
+
+@import "layouts/layout";
+@import "components/hero";
+@import "components/header";
+@import "components/nav";
+@import "components/features";
+@import "components/feature";
+@import "components/btn";
+
+
