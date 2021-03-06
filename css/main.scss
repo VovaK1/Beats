@@ -1,5 +1,12 @@
 $containerWidth: 910px;
 $baseFontSize: 16px;
+@mixin  sectionTitle {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+}
 
 //colors
 $red: #E01F3D;
@@ -24,5 +31,11 @@ $red: #E01F3D;
 @import "components/features";
 @import "components/feature";
 @import "components/btn";
+@import "components/why";
+@import "components/advantages";
+@import "components/advantage";
+@import "components/section";
+@import "components/reviews";
+
 
 

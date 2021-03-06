@@ -90,10 +90,12 @@ footer {
 }
 .hero__title {
   font-size: 48px;
+  font-weight: 700;
   line-height: 1.1;
-  font-weight: bold;
-  margin-bottom: 20px;
   text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  text-align: left;
 }
 .hero__title-desc {
   font-size: 21px;
@@ -173,4 +175,113 @@ footer {
 .btn--theme--red:hover {
   background: #fff;
   color: #E01F3D;
+}
+
+.why {
+  position: relative;
+}
+.why:before {
+  content: url("../images/decor/triangle.png");
+  position: absolute;
+  bottom: -15px;
+  right: 85%;
+  width: 34px;
+  height: 34px;
+}
+.why__container {
+  height: 100vh;
+  min-height: 650px;
+  padding: 100px 0;
+  align-items: center;
+  position: relative;
+}
+.why__title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.why__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.why__subtitle {
+  color: #666;
+  padding: 0 20%;
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.advantages__item {
+  flex: 1;
+  padding: 0 3%;
+  position: relative;
+}
+.advantages__item:before {
+  content: url("../images/why/separator.png");
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  transform: translateX(50%);
+}
+.advantages__item:first-child {
+  padding-left: 0;
+}
+.advantages__item:last-child {
+  padding-right: 0;
+}
+.advantages__item:last-child:before {
+  display: none;
+}
+
+.advantage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.advantage__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 7px;
+}
+.advantage__desc {
+  color: #666;
+}
+
+.advantage__icon {
+  margin-bottom: 24px;
+}
+.advantage__icon-wrapper {
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+  position: relative;
+  background: #F2F5F4;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.advantage__icon-elem {
+  height: 60px;
+  width: 56px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 650px;
+  justify-content: center;
 }

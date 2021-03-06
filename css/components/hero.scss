@@ -25,11 +25,10 @@
   }
 
   &__title {
-    font-size: 48px;
-    line-height: 1.1;
-    font-weight: bold;
+    @include sectionTitle;
     margin-bottom: 20px;
-    text-transform: uppercase;
+    text-align: left;
+ 
 
     &-desc {
       font-size: 21px;

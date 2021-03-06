@@ -1,0 +1,30 @@
+.advantages__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.advantages__item {
+  flex: 1;
+  padding: 0 3%;
+  position: relative;
+
+  &:before {
+    content: url('../images/why/separator.png');
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    transform: translateX(50%);
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.why {
+  position: relative;
+
+  &:before {
+    content: url('../images/decor/triangle.png');
+    position: absolute;
+    bottom: -15px;
+    right: 85%;
+    width: 34px;
+    height: 34px;
+  }
+  
+  &__container {
+    height: 100vh;
+    min-height: 650px;
+    padding: 100px 0;
+    align-items: center;
+    position: relative;
+  }
+
+  &__title-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    @include sectionTitle;
+    margin-bottom: 18px;
+  }
+
+  &__subtitle {
+    color: #666;
+    padding: 0 20%;
+  }
+}
