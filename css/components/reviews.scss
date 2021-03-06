@@ -1,3 +1,83 @@
+.reviews-section {
+position: relative;
+
+&:before {
+  content: url("../images/decor/circle.png");
+  position: absolute;
+  bottom: -17px;
+  right: 83%;
+}
+
+  &__title {
+    @include sectionTitle;
+  }
+}
+
 .reviews {
-  
+  &__switcher {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__display {
+    background: #F8FAF9;
+    padding: 42px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      width: 83px;
+      height: 83px;
+      display: block;
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -61px;
+    }
+
+    &-inner {
+      display: flex;
+    }
+  }
+
+  &__avatar {
+    width: 253px;
+    height: 264px;
+  }
+
+  &__avatar-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    margin-left: 40px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 27px;
+  }
+
+  &__text {
+    color: #666;
+    margin-bottom: 38px;
+  }
+
+  &__author {
+    font-size: 18px;
+    font-weight: 700;
+
+  }
 }

@@ -284,4 +284,105 @@ footer {
   flex-direction: column;
   min-height: 650px;
   justify-content: center;
+  position: relative;
+}
+
+.reviews-section {
+  position: relative;
+}
+.reviews-section:before {
+  content: url("../images/decor/circle.png");
+  position: absolute;
+  bottom: -17px;
+  right: 83%;
+}
+.reviews-section__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.reviews__switcher {
+  display: flex;
+  justify-content: center;
+}
+.reviews__display {
+  background: #F8FAF9;
+  padding: 42px;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.reviews__display:before {
+  content: "";
+  width: 83px;
+  height: 83px;
+  display: block;
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -61px;
+}
+.reviews__display-inner {
+  display: flex;
+}
+.reviews__avatar {
+  width: 253px;
+  height: 264px;
+}
+.reviews__avatar-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.reviews__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin-left: 40px;
+}
+.reviews__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 27px;
+}
+.reviews__text {
+  color: #666;
+  margin-bottom: 38px;
+}
+.reviews__author {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.interactive-avatar {
+  width: 74px;
+  height: 74px;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.interactive-avatar--active {
+  border-color: #E01F3D;
+}
+.interactive-avatar__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+}
+.interactive-avatar__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
