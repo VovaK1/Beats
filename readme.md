@@ -1,10 +1,5 @@
-# This is a test-project for LoftSchool
+# This is a my second project for LoftSchool
 
++ How SASS works
 + How GIT works
-+ Understand the main commands
-
-```bash 
-
-$ git clone git@github...
-
-```
++ Basics of JavaScript
