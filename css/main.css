@@ -501,3 +501,36 @@ footer {
   border-radius: 50%;
   display: none;
 }
+
+.fixed-menu {
+  position: fixed;
+  top: 30%;
+  right: 5%;
+  z-index: 100;
+}
+.fixed-menu__item {
+  margin-bottom: 7px;
+}
+.fixed-menu__item--active .fixed-menu__link {
+  border-color: #E01F3D;
+}
+.fixed-menu__link {
+  height: 19px;
+  width: 18px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: block;
+  position: relative;
+}
+.fixed-menu__link:before {
+  content: "";
+  background: #292929;
+  width: 9px;
+  height: 9px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}

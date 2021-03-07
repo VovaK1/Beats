@@ -8,6 +8,9 @@ $baseFontSize: 16px;
   text-align: center;
 }
 
+//z-indexes
+$z-fixed-menu: 100;
+
 //colors
 $red: #E01F3D;
 
@@ -23,6 +26,7 @@ $red: #E01F3D;
   src: url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
   font-family:  'Play', sans-serif;
 }
+
 
 @import "layouts/layout";
 @import "components/hero";
@@ -40,6 +44,7 @@ $red: #E01F3D;
 @import "components/order";
 @import "components/form";
 @import "components/radio";
+@import "components/fixed-menu";
 
 
 
