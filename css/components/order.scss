@@ -1,0 +1,8 @@
+.order {
+  background: #181818;
+
+  &__title {
+    @include sectionTitle;
+    color: #fff;
+  }
+}

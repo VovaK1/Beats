@@ -1,0 +1,6 @@
+.radio {
+  display: flex;
+}
+.radio__elem {
+  display: none;
+}
