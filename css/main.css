@@ -167,6 +167,8 @@ footer {
   padding: 18px 41px;
   line-height: 1;
   border-radius: 100px;
+  border: none;
+  cursor: pointer;
 }
 .btn--theme--red {
   background: #E01F3D;
@@ -175,6 +177,15 @@ footer {
 .btn--theme--red:hover {
   background: #fff;
   color: #E01F3D;
+}
+.btn--theme--transparent {
+  background: transparent;
+  color: #fff;
+  text-transform: none;
+  font-weight: normal;
+}
+.btn--theme--transparent:hover {
+  background: #E01F3D;
 }
 
 .why {
@@ -289,6 +300,7 @@ footer {
 
 .reviews-section {
   position: relative;
+  z-index: 1;
 }
 .reviews-section:before {
   content: url("../images/decor/circle.png");
@@ -388,7 +400,7 @@ footer {
 }
 
 .order {
-  background: #181818;
+  background: url("../images/decor/background-form.jpg") center bottom 20% no-repeat;
 }
 .order__title {
   font-size: 48px;
@@ -397,6 +409,7 @@ footer {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+  margin-bottom: 50px;
 }
 
 .form {
@@ -425,11 +438,12 @@ footer {
   width: 100%;
   border: 3px solid transparent;
   padding: 18px 12px;
+  border-radius: 4px;
 }
 .form__input--textarea {
   height: 152px;
   resize: none;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 .form__input:focus {
   border-color: #E01F3D;
@@ -438,10 +452,10 @@ footer {
 .form__controls {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 .form__controls:last-child {
-  margin-bottom: 0;
+  margin-bottom: 45px;
 }
 
 .radio {

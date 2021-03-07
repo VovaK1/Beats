@@ -1,5 +1,6 @@
 .reviews-section {
 position: relative;
+z-index: 1;
 
 &:before {
   content: url("../images/decor/circle.png");

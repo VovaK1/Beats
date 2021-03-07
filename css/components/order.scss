@@ -1,8 +1,9 @@
 .order {
-  background: #181818;
+  background: url("../images/decor/background-form.jpg") center bottom 20% no-repeat;
 
   &__title {
     @include sectionTitle;
     color: #fff;
+    margin-bottom: 50px ;
   }
 }

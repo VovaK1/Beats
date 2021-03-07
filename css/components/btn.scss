@@ -4,6 +4,8 @@
   padding: 18px 41px;
   line-height: 1;
   border-radius: 100px;
+  border: none;
+  cursor: pointer;
 
   &--theme--red {
     background: $red;
@@ -12,6 +14,17 @@
     &:hover {
       background: #fff;
       color: $red;
+    }
+  }
+
+  &--theme--transparent {
+    background: transparent;
+    color: #fff;
+    text-transform: none;
+    font-weight: normal;
+
+    &:hover {
+      background: $red;
     }
   }
 }
