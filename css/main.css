@@ -386,3 +386,104 @@ footer {
   height: 100%;
   object-fit: cover;
 }
+
+.order {
+  background: #181818;
+}
+.order__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+.form {
+  display: flex;
+  color: #FFFFFF;
+}
+.form__col {
+  flex: 1;
+  margin-right: 27px;
+}
+.form__col:last-child {
+  margin-right: 0;
+}
+.form__row {
+  display: flex;
+  margin-bottom: 11px;
+}
+.form__block {
+  flex: 1;
+  margin-right: 13px;
+}
+.form__block:last-child {
+  margin-right: 0;
+}
+.form__input {
+  width: 100%;
+  border: 3px solid transparent;
+  padding: 18px 12px;
+}
+.form__input--textarea {
+  height: 152px;
+  resize: none;
+  margin-bottom: 15px;
+}
+.form__input:focus {
+  border-color: #E01F3D;
+  outline: none;
+}
+.form__controls {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 19px;
+}
+.form__controls:last-child {
+  margin-bottom: 0;
+}
+
+.radio {
+  display: flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
+  margin-right: 15px;
+}
+.radio:last-child {
+  margin-right: 0;
+}
+.radio--checkbox .radio__visible {
+  border-radius: 0;
+}
+.radio--checkbox .radio__visible:before {
+  content: "";
+  background: url("../images/decor/tick.png") center center no-repeat;
+}
+.radio__elem {
+  display: none;
+}
+.radio__elem:checked ~ .radio__visible:before {
+  display: block;
+}
+.radio__visible {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+  background: #fff;
+  margin-right: 10px;
+}
+.radio__visible:before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background: #E01F3D;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: none;
+}
