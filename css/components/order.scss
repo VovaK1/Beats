@@ -1,5 +1,6 @@
 .order {
-  background: url("../images/decor/background-form.jpg") center bottom 20% no-repeat;
+  background: url("../images/decor/background-form.jpg") center center no-repeat;
+  background-size: 100%, 100%;
 
   &__title {
     @include sectionTitle;
