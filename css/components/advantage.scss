@@ -4,10 +4,10 @@
   text-align: center;
 
   &__title {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.1;
-    margin-bottom: 7px;
+    margin-bottom: 0.4375rem;
   }
 
   &__desc {
@@ -16,12 +16,12 @@
 }
 
 .advantage__icon {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 
   &-wrapper {
     display: inline-block;
-    width: 128px;
-    height: 128px;
+    width: 8rem;
+    height: 8rem;
     position: relative;
     background: #F2F5F4;
     border-radius: 50%;
@@ -29,8 +29,8 @@
   }
 
   &-elem {
-    height: 60px;
-    width: 56px;
+    height: 3.75rem;
+    width: 3.5rem;
     position: absolute;
     top: 50%;
     left: 50%;

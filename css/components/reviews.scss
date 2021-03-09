@@ -5,7 +5,7 @@ z-index: 1;
 &:before {
   content: url("../images/decor/circle.png");
   position: absolute;
-  bottom: -17px;
+  bottom: -1.063rem;
   right: 83%;
 }
 
@@ -22,22 +22,22 @@ z-index: 1;
 
   &__display {
     background: #F8FAF9;
-    padding: 42px;
-    margin-bottom: 15px;
+    padding: 2.625rem;
+    margin-bottom: 0.938rem;
     position: relative;
     overflow: hidden;
 
     &:before {
       content: "";
-      width: 83px;
-      height: 83px;
+      width: 5.188rem;
+      height: 5.188rem;
       display: block;
       position: absolute;
       background: #fff;
       border-radius: 50%;
       left: 50%;
       transform: translateX(-50%);
-      top: -61px;
+      top: -3.813rem;
     }
 
     &-inner {
@@ -46,8 +46,8 @@ z-index: 1;
   }
 
   &__avatar {
-    width: 253px;
-    height: 264px;
+    width: 15.813rem;
+    height: 16.5rem;
   }
 
   &__avatar-img {
@@ -61,23 +61,23 @@ z-index: 1;
     flex-direction: column;
     justify-content: center;
     flex: 1;
-    margin-left: 40px;
+    margin-left: 2.5rem;
   }
 
   &__title {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.1;
-    margin-bottom: 27px;
+    margin-bottom: 1.688rem;
   }
 
   &__text {
     color: #666;
-    margin-bottom: 38px;
+    margin-bottom: 2.375rem;
   }
 
   &__author {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
 
   }

@@ -4,16 +4,16 @@
   &:before {
     content: url('../images/decor/triangle.png');
     position: absolute;
-    bottom: -15px;
+    bottom: -0.938rem;
     right: 85%;
-    width: 34px;
-    height: 34px;
+    width: 2.125rem;
+    height: 2.125rem;
   }
   
   &__container {
     height: 100vh;
-    min-height: 650px;
-    padding: 100px 0;
+    min-height: 40.625rem;
+    padding: 6.25rem 0;
     align-items: center;
     position: relative;
   }
@@ -23,12 +23,12 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 3.75rem;
   }
 
   &__title {
     @include sectionTitle;
-    margin-bottom: 18px;
+    margin-bottom: 1.125rem;
   }
 
   &__subtitle {
