@@ -2,21 +2,46 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  &__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+.phone-number {
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  @media (max-width: 992px) {
+    font-size: 1.286rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 1.385rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
   }
 }
 
-.phone-number {
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-}
-
 .phone-number__icon--elem {
-  width: 14px;
-  height: 14px;
-  margin-right: 6px;
+  width: 0.875rem;
+  height: 0.875rem;
+  margin-right: 0.375rem;
+    @media (max-width: 992px) {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.45rem;
+    }
+
+    @media (max-width: 768px) {
+    width: 1.077rem;
+    height: 1.077rem;
+    margin-right: 0.5rem
+     }
+    @media (max-width: 480px) {
+      width: 1.167rem;
+      height: 1.167rem;
+      margin-right: 0.6rem
+      }
 }

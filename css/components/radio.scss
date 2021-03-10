@@ -2,7 +2,7 @@
   display: flex;
   cursor: pointer;
   user-select: none;
-  margin-right: 15px;
+  margin-right: 0.938rem;
 
   &:last-child {
     margin-right: 0;
@@ -30,17 +30,17 @@
   }
 
   &__visible {
-    width: 25px;
-    height: 25px;
+    width: 1.563rem;
+    height: 1.563rem;
     border-radius: 50%;
     position: relative;
     background: #fff;
-    margin-right: 10px;
+    margin-right: 0.625rem;
 
     &:before {
       content: "";
-      width: 13px;
-      height: 13px;
+      width: 0.813rem;
+      height: 0.813rem;
       background: $red;
       position: absolute;
       top: 50%;
