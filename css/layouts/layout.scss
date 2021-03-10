@@ -1,5 +1,15 @@
 html {
-  font-size: 16px;
+  font-size: $baseFontSize;
+
+  @media (max-width: 992px) {
+      font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 
 html, body {
@@ -10,7 +20,7 @@ body {
   font-family: 'Play', sans-serif;
   background: #fff;
   line-height: 1.42;
-  font-size: $baseFontSize;
+  font-size: 1rem;
   color: #292929;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,14 +31,22 @@ body {
   width: 100%;
   overflow: hidden;
   min-height: 100%;
-  min-width: $containerWidth + 1.25rem;
+  min-width: 0;
   position: relative;
 }
 
 .container {
   margin: 0 auto;
-  width: $containerWidth;
+  width: auto;
+  max-width: $containerWidth;
   position: relative;
+
+  @media (max-width: 992px) {
+    max-width: 700px;
+  }
+  @media (max-width: 768px) {
+    max-width: 450px;
+  }
 }
 
 * {

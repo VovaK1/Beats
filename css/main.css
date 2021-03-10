@@ -10,6 +10,21 @@
 html {
   font-size: 16px;
 }
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
 
 html, body {
   height: 100%;
@@ -30,14 +45,25 @@ body {
   width: 100%;
   overflow: hidden;
   min-height: 100%;
-  min-width: 58.125rem;
+  min-width: 0;
   position: relative;
 }
 
 .container {
   margin: 0 auto;
-  width: 56.875rem;
+  width: auto;
+  max-width: 56.875rem;
   position: relative;
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 700px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 450px;
+  }
 }
 
 * {
@@ -113,10 +139,11 @@ footer {
   align-items: center;
   justify-content: space-between;
 }
-.header__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 
 .phone-number {
@@ -124,22 +151,93 @@ footer {
   display: flex;
   align-items: center;
 }
+@media (max-width: 992px) {
+  .phone-number {
+    font-size: 1.286rem;
+  }
+}
+@media (max-width: 768px) {
+  .phone-number {
+    font-size: 1.385rem;
+  }
+}
+@media (max-width: 480px) {
+  .phone-number {
+    font-size: 1.5rem;
+  }
+}
 
 .phone-number__icon--elem {
   width: 0.875rem;
   height: 0.875rem;
   margin-right: 0.375rem;
 }
+@media (max-width: 992px) {
+  .phone-number__icon--elem {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.45rem;
+  }
+}
+@media (max-width: 768px) {
+  .phone-number__icon--elem {
+    width: 1.077rem;
+    height: 1.077rem;
+    margin-right: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .phone-number__icon--elem {
+    width: 1.167rem;
+    height: 1.167rem;
+    margin-right: 0.6rem;
+  }
+}
 
 .nav__list {
   display: flex;
   align-items: center;
 }
+@media (max-width: 480px) {
+  .nav__list {
+    flex-direction: column;
+  }
+}
 .nav__item {
   margin-right: 1.688rem;
 }
+@media (max-width: 992px) {
+  .nav__item {
+    margin-right: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+  .nav__item {
+    margin-right: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .nav__item {
+    margin-right: 0;
+  }
+}
 .nav__item:last-child {
   margin-right: 0;
+}
+@media (max-width: 992px) {
+  .nav {
+    font-size: 1.143rem;
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    font-size: 1.231rem;
+  }
+}
+@media (max-width: 480px) {
+  .nav {
+    font-size: 1.5rem;
+  }
 }
 
 .features {
