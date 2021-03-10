@@ -400,7 +400,8 @@ footer {
 }
 
 .order {
-  background: url("../images/decor/background-form.jpg") center bottom 20% no-repeat;
+  background: url("../images/decor/background-form.jpg") center center no-repeat;
+  background-size: 100%, 100%;
 }
 .order__title {
   font-size: 48px;
