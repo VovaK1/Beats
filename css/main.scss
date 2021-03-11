@@ -8,11 +8,18 @@ $containerWidth: 56.875rem;
   text-align: center;
 }
 
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
 //z-indexes
 $z-fixed-menu: 100;
 
 //colors
 $red: #E01F3D;
+
+//media 
+@import "layouts/media";
 
 //normalize
 @import url('./layouts/normalize.css');

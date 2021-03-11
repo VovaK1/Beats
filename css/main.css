@@ -10,19 +10,14 @@
 html {
   font-size: 16px;
 }
-@media (max-width: 992px) {
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
   html {
     font-size: 14px;
-  }
-}
-@media (max-width: 768px) {
-  html {
-    font-size: 13px;
-  }
-}
-@media (max-width: 480px) {
-  html {
-    font-size: 12px;
   }
 }
 
@@ -45,13 +40,12 @@ body {
   width: 100%;
   overflow: hidden;
   min-height: 100%;
-  min-width: 0;
   position: relative;
 }
 
 .container {
   margin: 0 auto;
-  width: auto;
+  width: 95%;
   max-width: 56.875rem;
   position: relative;
 }
@@ -101,11 +95,22 @@ footer {
   background-color: #f5f5f5;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .hero {
+    background: none;
+    background-color: #f5f5f5;
+  }
+}
 .hero:before {
   content: url("../images/decor/Rectangle.png");
   position: absolute;
   bottom: -1.875rem;
   left: 80%;
+}
+@media screen and (max-width: 768px) {
+  .hero:before {
+    display: none;
+  }
 }
 .hero__container {
   height: 100vh;
@@ -118,6 +123,19 @@ footer {
 .hero__title-section {
   width: 46%;
 }
+@media screen and (max-width: 768px) {
+  .hero__title-section {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero__title-section:before {
+    content: url(../images/hero/beats-tablets.png);
+  }
+}
 .hero__title {
   font-size: 3rem;
   font-weight: 700;
@@ -127,11 +145,26 @@ footer {
   margin-bottom: 1.25rem;
   text-align: left;
 }
+@media screen and (max-width: 768px) {
+  .hero__title {
+    text-align: center;
+  }
+}
 .hero__title-desc {
   font-size: 1.313rem;
   font-family: "Alegreya Sans";
   margin-bottom: 2.25rem;
   padding-right: 20%;
+}
+@media screen and (max-width: 768px) {
+  .hero__title-desc {
+    padding: 0 10%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero__icons-section {
+    display: none;
+  }
 }
 
 .header {
@@ -139,31 +172,16 @@ footer {
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-}
 
 .phone-number {
   font-size: 1.125rem;
   display: flex;
   align-items: center;
 }
-@media (max-width: 992px) {
-  .phone-number {
-    font-size: 1.286rem;
-  }
-}
-@media (max-width: 768px) {
-  .phone-number {
-    font-size: 1.385rem;
-  }
-}
-@media (max-width: 480px) {
-  .phone-number {
-    font-size: 1.5rem;
+
+@media screen and (max-width: 768px) {
+  .phone-number.header__phone-number {
+    display: none;
   }
 }
 
@@ -172,72 +190,18 @@ footer {
   height: 0.875rem;
   margin-right: 0.375rem;
 }
-@media (max-width: 992px) {
-  .phone-number__icon--elem {
-    width: 1rem;
-    height: 1rem;
-    margin-right: 0.45rem;
-  }
-}
-@media (max-width: 768px) {
-  .phone-number__icon--elem {
-    width: 1.077rem;
-    height: 1.077rem;
-    margin-right: 0.5rem;
-  }
-}
-@media (max-width: 480px) {
-  .phone-number__icon--elem {
-    width: 1.167rem;
-    height: 1.167rem;
-    margin-right: 0.6rem;
-  }
-}
 
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
 .nav__list {
   display: flex;
   align-items: center;
 }
-@media (max-width: 480px) {
-  .nav__list {
-    flex-direction: column;
-  }
-}
 .nav__item {
   margin-right: 1.688rem;
-}
-@media (max-width: 992px) {
-  .nav__item {
-    margin-right: 1.1rem;
-  }
-}
-@media (max-width: 768px) {
-  .nav__item {
-    margin-right: 1.2rem;
-  }
-}
-@media (max-width: 480px) {
-  .nav__item {
-    margin-right: 0;
-  }
-}
-.nav__item:last-child {
-  margin-right: 0;
-}
-@media (max-width: 992px) {
-  .nav {
-    font-size: 1.143rem;
-  }
-}
-@media (max-width: 768px) {
-  .nav {
-    font-size: 1.231rem;
-  }
-}
-@media (max-width: 480px) {
-  .nav {
-    font-size: 1.5rem;
-  }
 }
 
 .features {
@@ -610,6 +574,11 @@ footer {
   top: 30%;
   right: 5%;
   z-index: 100;
+}
+@media screen and (max-width: 768px) {
+  .fixed-menu {
+    display: none;
+  }
 }
 .fixed-menu__item {
   margin-bottom: 0.4375rem;
