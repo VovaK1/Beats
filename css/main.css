@@ -177,6 +177,10 @@ footer {
   font-size: 1.125rem;
   display: flex;
   align-items: center;
+  white-space: nowrap;
+}
+.phone-number__icon {
+  flex-shrink: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -199,9 +203,34 @@ footer {
 .nav__list {
   display: flex;
   align-items: center;
+  margin: 0 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px;
 }
 .nav__item {
   margin-right: 1.688rem;
+  margin-bottom: 10px;
+}
+
+.hamburger {
+  width: 26px;
+  height: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: inline-flex;
+  }
+}
+
+.hamburger__plank {
+  display: block;
+  background: #292929;
+  height: 4px;
+  border-radius: 10px;
 }
 
 .features {

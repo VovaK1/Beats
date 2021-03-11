@@ -7,9 +7,14 @@
   &__list {
     display: flex;
     align-items: center;
+    margin: 0 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
   }
   
   &__item {
     margin-right: 1.688rem;
+    margin-bottom: 10px;
   }
 }

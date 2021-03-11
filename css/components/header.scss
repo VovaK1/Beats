@@ -8,6 +8,11 @@
   font-size: 1.125rem;
   display: flex;
   align-items: center;
+  white-space: nowrap;
+
+  &__icon {
+    flex-shrink: 0;
+  }
 }
 
 .phone-number.header__phone-number {
@@ -17,8 +22,10 @@
 }
 
 
+
 .phone-number__icon--elem {
   width: 0.875rem;
   height: 0.875rem;
   margin-right: 0.375rem;
+
 }
