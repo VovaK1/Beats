@@ -1,0 +1,52 @@
+.socials {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+  display: block;
+  background: center center no-repeat;
+  width: 36px; 
+  height: 36px;
+}
+
+}
+
+.socials__item-icon-vk .socials__link {
+  background: url("../images/socials/sprite-socials.png")  -66px -122px;
+
+  &:hover {
+    background: url("../images/socials/sprite-socials.png") -10px -122px;
+  }
+}
+
+.socials__item-icon-f .socials__link {
+  background: url('../images/socials/sprite-socials.png') -66px -10px;
+
+  &:hover {
+    background: url('../images/socials/sprite-socials.png') -10px -10px;
+  }
+}
+
+
+.socials__item-icon-in .socials__link {
+  background: url('../images/socials/sprite-socials.png')  -66px -66px;
+
+  &:hover {
+    background: url('../images/socials/sprite-socials.png')  -10px -66px;
+  }
+}
+
+.socials__item-icon-tg .socials__link {
+  background: url('../images/socials/sprite-socials.png')  -122px -66px;
+
+  &:hover {
+    background: url('../images/socials/sprite-socials.png')  -122px -10px;
+  }
+}

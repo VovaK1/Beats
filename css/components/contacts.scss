@@ -1,0 +1,21 @@
+.contacts {
+
+display: flex;
+justify-content: center;
+
+  &__map {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__address {
+    font-size: rem(18px);
+    font-style: normal;
+  }
+}
