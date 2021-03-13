@@ -13,14 +13,10 @@
     bottom: -1.875rem;
     left: 80%;
 
-    @include tablets {
-      display: none;
-    }
   }
 
   &__container {
-    height: 100vh;
-    min-height: 40.625rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,6 +29,7 @@
 
     @include tablets {
       width: 100%;
+      flex: 1;
       display: flex;
       text-align: center;
       flex-direction: column;
@@ -53,6 +50,9 @@
     @include tablets {
       text-align: center;
     }
+    @include phones {
+      font-size: rem(32px);
+    }
  
 
     &-desc {
@@ -62,13 +62,14 @@
       padding-right: 20%;
 
       @include tablets {
-        padding: 0 10%;
+        padding: 0 25%;
+      }
+      @include phones {
+        padding: 0 15%;
       }
     }
 
-
   }
-
   &__icons-section {
     @include tablets {
       display: none;

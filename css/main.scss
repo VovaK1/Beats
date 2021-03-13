@@ -1,5 +1,8 @@
+//variables
 $baseFontSize: 16px;
 $containerWidth: 56.875rem;
+
+//mixins
 @mixin  sectionTitle {
   font-size: 3rem;
   font-weight: 700;

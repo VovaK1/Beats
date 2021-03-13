@@ -1,6 +1,11 @@
 .advantages__list {
   display: flex;
   flex-direction: row;
+
+  @include phones {
+    flex-direction: column;
+
+  }
 }
 
 .advantages__item {
@@ -8,12 +13,21 @@
   padding: 0 3%;
   position: relative;
 
+  @include phones {
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
   &:before {
     content: url('../images/why/separator.png');
     position: absolute;
     top: 3.125rem;
     right: 0px;
     transform: translateX(50%);
+
+    @include phones {
+      display: none;
+    }
   }
 
   &:first-child {

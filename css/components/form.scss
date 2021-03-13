@@ -1,7 +1,10 @@
 .form {
   display: flex;
   color: #FFFFFF;
-
+  @include tablets {
+  flex-direction: column;
+  padding: 0 20%;
+  }
 
   &__col {
     flex: 1;

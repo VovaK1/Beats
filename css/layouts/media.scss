@@ -1,5 +1,5 @@
 @function rem($px) {
-  @return $px / $baseFontSize +0rem;
+  @return $px / $baseFontSize + 0rem;
 }
 
 @mixin tablets {

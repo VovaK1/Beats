@@ -38,13 +38,7 @@ body {
   width: 95%;
   max-width: $containerWidth;
   position: relative;
-
-  @media (max-width: 992px) {
-    max-width: 700px;
-  }
-  @media (max-width: 768px) {
-    max-width: 450px;
-  }
+  height: 100vh;
 }
 
 * {
