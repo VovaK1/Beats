@@ -1,18 +1,23 @@
 .order {
   background: url("../images/decor/background-form.jpg") center center  no-repeat;
-  background-size: 100%, 100%;
-  position: relative;
+  background-size: cover;
+  position: relative; 
 
   &__title {
     @include sectionTitle;
     color: #fff;
     margin-bottom: 3.125rem;
+
+    @include phones {
+      font-size: rem(32px);
+    }
   }
 
   &__container {
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 1.5rem 0 3.25rem;
     padding-top: rem(68px);
   }

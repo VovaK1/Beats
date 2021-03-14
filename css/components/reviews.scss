@@ -20,6 +20,12 @@ z-index: 1;
     justify-content: center;
   }
 
+  &-section__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &__display {
     background: #F8FAF9;
     padding: 2.625rem;
