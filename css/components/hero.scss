@@ -2,32 +2,57 @@
   background: url("../images/hero/beats.png") left 80% center no-repeat;
   background-color: #f5f5f5;
   position: relative;
+  @include tablets {
+  background: none;
+  background-color: #f5f5f5;
+  }
 
   &:before {
     content: url("../images/decor/Rectangle.png");
     position: absolute;
     bottom: -1.875rem;
     left: 80%;
+
   }
 
   &__container {
-    height: 100vh;
-    min-height: 40.625rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 1.5rem 0 3.25rem;
   }
 
-
   &__title-section {
+ 
     width: 46%;
+
+    @include tablets {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &:before {
+        content: url(../images/hero/beats-tablets.png);
+      }
+    }
   }
 
   &__title {
     @include sectionTitle;
     margin-bottom: 1.25rem;
     text-align: left;
+
+    @include tablets {
+      text-align: center;
+    }
+    @include phones {
+      font-size: rem(32px);
+    }
  
 
     &-desc {
@@ -35,6 +60,19 @@
       font-family: 'Alegreya Sans';
       margin-bottom: 2.25rem;
       padding-right: 20%;
+
+      @include tablets {
+        padding: 0 25%;
+      }
+      @include phones {
+        padding: 0 15%;
+      }
+    }
+
+  }
+  &__icons-section {
+    @include tablets {
+      display: none;
     }
   }
 

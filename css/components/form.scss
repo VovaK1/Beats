@@ -2,12 +2,23 @@
   display: flex;
   color: #FFFFFF;
 
+  @include tablets {
+  flex-direction: column;
+  padding: 0 20%;
+  }
+  @include phones {
+    padding: 0;
+  }
 
   &__col {
     flex: 1;
     margin-right: 1.6875rem;
 
     &:last-child {
+      margin-right: 0;
+    }
+
+    @include tablets {
       margin-right: 0;
     }
   }
@@ -48,9 +59,18 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 1.25rem;
+    &--checkbox {
+      margin-bottom: rem(40px);
+    }
+    @include phones {
+      justify-content: center;
+    }
+  }
 
-    &:last-child {
-      margin-bottom: 2.813rem;
+  &__btns {
+    @include phones {
+      display: flex;
+      justify-content: center ;
     }
   }
 

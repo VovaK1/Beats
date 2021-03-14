@@ -3,6 +3,18 @@
   flex-direction: column;
   text-align: center;
 
+  @include phones {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &__title {
     font-size: 1.5rem;
     font-weight: 700;
@@ -12,11 +24,17 @@
 
   &__desc {
     color: #666;
+
   }
 }
 
 .advantage__icon {
   margin-bottom: 1.5rem;
+
+  @include phones {
+    margin-bottom: 0;
+    margin-right: rem(12px);
+  }
 
   &-wrapper {
     display: inline-block;

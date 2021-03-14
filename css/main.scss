@@ -1,5 +1,8 @@
+//variables
 $baseFontSize: 16px;
 $containerWidth: 56.875rem;
+
+//mixins
 @mixin  sectionTitle {
   font-size: 3rem;
   font-weight: 700;
@@ -8,11 +11,18 @@ $containerWidth: 56.875rem;
   text-align: center;
 }
 
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
 //z-indexes
 $z-fixed-menu: 100;
 
 //colors
 $red: #E01F3D;
+
+//media 
+@import "layouts/media";
 
 //normalize
 @import url('./layouts/normalize.css');
@@ -32,6 +42,7 @@ $red: #E01F3D;
 @import "components/hero";
 @import "components/header";
 @import "components/nav";
+@import "components/hamburger";
 @import "components/features";
 @import "components/feature";
 @import "components/btn";
@@ -44,7 +55,10 @@ $red: #E01F3D;
 @import "components/order";
 @import "components/form";
 @import "components/radio";
+@import "components/contacts";
+@import "components/socials";
 @import "components/fixed-menu";
+@import "components/footer";
 
 
 

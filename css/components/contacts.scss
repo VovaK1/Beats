@@ -1,0 +1,45 @@
+.contacts {
+  position: relative;
+
+  &__map {
+    height: 100%;
+    padding-bottom: rem(86px);
+    margin-bottom: 1.5rem;
+
+    @include tablets {
+      padding-bottom: rem(105px);
+    }    
+    @include phones {
+      padding-bottom: rem(150px);
+    }   
+
+    &-img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    @include phones {
+      margin-bottom: 10px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__address {
+    font-size: rem(18px);
+    font-style: normal;
+
+    @include phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+  }
+}
