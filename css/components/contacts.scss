@@ -35,5 +35,11 @@
   &__address {
     font-size: rem(18px);
     font-style: normal;
+
+    @include phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
   }
 }

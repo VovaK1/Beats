@@ -1,13 +1,13 @@
 .footer {
   position: absolute;
-  height: auto;
-  top: 90%;
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 1.5rem 0 ;
 
   &__container {
     display: flex;
     flex-direction: column;
+    height: auto;
   }
 }
