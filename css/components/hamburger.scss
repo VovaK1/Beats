@@ -7,6 +7,9 @@
 
   @include tablets {
     display: inline-flex;
+    position: absolute;
+    right: rem(42px);
+    top: rem(42px);
   }
 
 }
@@ -16,4 +19,7 @@
   background: #292929;
   height: 4px;  
   border-radius: 10px;
+  @include tablets {
+    
+  }
 }

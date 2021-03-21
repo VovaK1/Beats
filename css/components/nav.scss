@@ -18,3 +18,30 @@
     margin-bottom: 10px;
   }
 }
+
+.nav--full {
+    @include tablets {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $z-nav-full;
+    background: #313131;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__list {
+    font-size: rem(36px);
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.nav--full {
+  display: none;
+}

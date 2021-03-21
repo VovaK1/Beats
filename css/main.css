@@ -209,6 +209,33 @@ footer {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .nav--full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: #313131;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.nav--full__list {
+  font-size: 2.25rem;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav--full {
+  display: none;
+}
+
 .hamburger {
   width: 26px;
   height: 24px;
@@ -219,6 +246,9 @@ footer {
 @media screen and (max-width: 768px) {
   .hamburger {
     display: inline-flex;
+    position: absolute;
+    right: 2.625rem;
+    top: 2.625rem;
   }
 }
 
@@ -228,7 +258,6 @@ footer {
   height: 4px;
   border-radius: 10px;
 }
-
 .features {
   display: flex;
 }
@@ -765,7 +794,7 @@ footer {
   margin-right: 10px;
 }
 .socials__item:last-child {
-  margin-right: 0;
+  margin-right: 0cd;
 }
 .socials__link {
   display: block;
