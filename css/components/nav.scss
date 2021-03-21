@@ -20,6 +20,7 @@
 }
 
 .nav--full {
+    display: none;
     @include tablets {
     position: absolute;
     top: 0;
@@ -41,7 +42,4 @@
     flex-direction: column;
     align-items: center;
   }
-}
-.nav--full {
-  display: none;
 }

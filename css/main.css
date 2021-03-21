@@ -209,6 +209,9 @@ footer {
   margin-bottom: 10px;
 }
 
+.nav--full {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .nav--full {
     position: absolute;
@@ -230,10 +233,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.nav--full {
-  display: none;
 }
 
 .hamburger {
