@@ -20,6 +20,7 @@
 }
 
 .nav--full {
+  display: none;
     @include tablets {
     position: absolute;
     top: 0;
