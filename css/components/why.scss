@@ -1,5 +1,6 @@
 .why {
   position: relative;
+  z-index: 5;
 
   &:before {
     content: url('../images/decor/triangle.png');

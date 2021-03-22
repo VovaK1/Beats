@@ -312,6 +312,7 @@ footer {
   border-radius: 6.25rem;
   border: none;
   cursor: pointer;
+  display: inline-block;
 }
 .btn--theme--red {
   background: #E01F3D;
@@ -333,6 +334,7 @@ footer {
 
 .why {
   position: relative;
+  z-index: 5;
 }
 .why:before {
   content: url("../images/decor/triangle.png");
@@ -899,4 +901,214 @@ footer {
   display: flex;
   flex-direction: column;
   height: auto;
+}
+
+.products {
+  background: #F8FAF9;
+}
+.products__container {
+  display: flex;
+  align-items: center;
+}
+
+.product__title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.25rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .product__title {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .product__desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.product__text {
+  color: #666;
+  padding-right: 15%;
+  margin-bottom: 27px;
+}
+@media screen and (max-width: 768px) {
+  .product__text {
+    padding: 0 5%;
+    text-align: center;
+  }
+}
+.product__chars {
+  display: flex;
+  padding-right: 40%;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.product__chars-name {
+  color: #666;
+}
+.product__chars-value {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .product__chars {
+    padding: 0;
+    width: 30%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__chars {
+    width: 60%;
+  }
+}
+.product__order {
+  display: flex;
+  padding-right: 20%;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .product__order {
+    padding: 0;
+    width: 45%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__order {
+    width: 75%;
+  }
+}
+.product__price {
+  font-size: 2.25rem;
+}
+@media screen and (max-width: 768px) {
+  .product__price {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__price {
+    font-size: 2rem;
+  }
+}
+.product__container {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .product__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.product__container-col {
+  width: 47%;
+  margin-right: 3.6875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product__container-col:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .product__container-col {
+    margin-right: 0;
+    margin-bottom: 3.125rem;
+  }
+  .product__container-col:last-child {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .product__container-col--right {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__container-col {
+    margin-bottom: 1.5625rem;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5625rem;
+  cursor: pointer;
+}
+.dropdown:hover .dropdown__chars {
+  opacity: 80%;
+  right: 14%;
+}
+.dropdown__icon {
+  width: 5.6875rem;
+  height: 5.6875rem;
+  background: #9a9a9a;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.dropdown__icon-link {
+  display: block;
+}
+.dropdown__icon-elem {
+  width: 2.625rem;
+  height: 2.625rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dropdown__chars {
+  position: absolute;
+  width: 17.0625rem;
+  height: 18.375rem;
+  background: #fff;
+  top: 0%;
+  right: -9999px;
+  padding: 1.75rem;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+@media screen and (max-width: 768px) {
+  .dropdown {
+    display: none;
+  }
+}
+
+.chars__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  height: 100%;
+}
+
+.chars__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.char__name {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+}
+.char__name-img {
+  height: 2rem;
+  width: 2rem;
 }

@@ -1,0 +1,15 @@
+.char {
+
+  &__name {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    
+  }
+
+  &__name-img {
+    height: rem(32px);
+    width: rem(32px);
+  }
+}
