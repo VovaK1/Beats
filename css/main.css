@@ -929,6 +929,12 @@ footer {
     left: 15%;
   }
 }
+@media screen and (max-width: 480px) {
+  .products__slider-arrow--prev {
+    bottom: 70%;
+    left: 5%;
+  }
+}
 .products__slider-arrow--next {
   position: absolute;
   bottom: 45%;
@@ -938,6 +944,12 @@ footer {
   .products__slider-arrow--next {
     bottom: 65%;
     right: 15%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .products__slider-arrow--next {
+    bottom: 70%;
+    right: 5%;
   }
 }
 .products__container {
