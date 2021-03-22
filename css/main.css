@@ -905,6 +905,40 @@ footer {
 
 .products {
   background: #F8FAF9;
+  position: relative;
+}
+.products__list-wrapper {
+  overflow: hidden;
+  display: flex;
+}
+.products__slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.products__slider-arrow--prev {
+  position: absolute;
+  bottom: 45%;
+  left: -5%;
+}
+@media screen and (max-width: 768px) {
+  .products__slider-arrow--prev {
+    bottom: 65%;
+    left: 15%;
+  }
+}
+.products__slider-arrow--next {
+  position: absolute;
+  bottom: 45%;
+  right: -5%;
+}
+@media screen and (max-width: 768px) {
+  .products__slider-arrow--next {
+    bottom: 65%;
+    right: 15%;
+  }
 }
 .products__container {
   display: flex;

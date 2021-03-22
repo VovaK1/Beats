@@ -1,5 +1,49 @@
 .products {
   background: #F8FAF9;
+  position: relative;
+
+  &__list-wrapper {
+    overflow: hidden;
+    display: flex;
+  }
+
+  &__slider {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    &-arrow--prev {
+      position: absolute;
+      bottom: 45%;
+      left: -5%;
+      @include tablets {
+        bottom: 65%;
+        left: 15%;
+      }
+      @include phones {
+        bottom: 70%;
+        left: 5%;
+        }
+    }
+    
+    &-arrow--next {
+      position: absolute;
+      bottom: 45%;
+      right: -5%;
+      
+      @include tablets {
+        bottom: 65%;
+        right: 15%;
+      }
+      @include phones {
+        bottom: 70%;
+        right: 5%;
+        }
+      }
+    }
+  }
 
   &__container {
     display: flex;
