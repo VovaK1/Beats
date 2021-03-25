@@ -1158,3 +1158,78 @@ footer {
   height: 2rem;
   width: 2rem;
 }
+
+.team:before {
+  content: url("../images/team/Rectangle.png");
+  position: absolute;
+  top: -1rem;
+  right: 15%;
+}
+.team__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.team__title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3.125rem;
+}
+.team__member {
+  margin-right: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.team__member:last-child {
+  margin-right: 0;
+}
+.team__member-content {
+  height: 0;
+  overflow: hidden;
+}
+.team__member-img {
+  width: 13.75rem;
+  height: 18.125rem;
+  margin-bottom: 1.5625rem;
+}
+.team__member-name {
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  margin-bottom: 0.6875rem;
+}
+.team__member-name:after {
+  content: url("../images/team/triangle-down.png");
+  height: 0.5625rem;
+  width: 0.5625rem;
+  margin-left: 0.25rem;
+}
+.team__member-text {
+  color: #666;
+}
+.team__list {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .team__list--desktop {
+    display: none;
+  }
+}
+.team__list--tablets {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .team__list--tablets {
+    display: flex;
+    flex-direction: column;
+  }
+}

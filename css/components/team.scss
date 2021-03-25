@@ -1,0 +1,78 @@
+.team {
+
+  &:before {
+    content: url('../images/team/Rectangle.png');
+    position: absolute;
+    top: rem(-16px);
+    right: 15%;
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include sectionTitle;
+    margin-bottom: rem(50px);
+  }
+
+  &__member {
+    margin-right: rem(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-content {
+      height: 0;
+      overflow: hidden;
+    }
+
+    &-img {
+      width: rem(220px);
+      height: rem(290px);
+      margin-bottom: rem(25px);
+    }
+
+    &-name {
+      font-size: 18px;
+      font-weight: 700;
+      border: none;
+      outline: none;
+      background: none;
+      cursor: pointer;
+      margin-bottom: rem(11px);
+      &:after {
+        content: url('../images/team/triangle-down.png');
+        height: rem(9px);
+        width: rem(9px);
+        margin-left: rem(4px);
+      }
+    }
+    &-text {
+      color: #666;
+    }
+  }
+
+  &__list {
+    display: flex;
+  &--desktop {
+    @include tablets {
+      display: none;
+    }
+  }
+  &--tablets {
+    display: none;
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  }
+
+}
