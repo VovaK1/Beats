@@ -24,6 +24,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
     &:last-child {
       margin-right: 0;
     }
@@ -31,6 +32,7 @@
     &-content {
       height: 0;
       overflow: hidden;
+      transition: height 0.3s;
     }
 
     &-img {
@@ -75,4 +77,31 @@
   }
   }
 
+}
+
+.team__member.active .team__member-name {
+  &:after {
+    content: url('../images/team/triangle-up.png');
+    height: rem(9px);
+    width: rem(9px);
+    margin-left: rem(4px);
+  }
+}
+
+.team__list--desktop .team__member-content {
+  position: absolute;
+  top: 100%;
+}
+
+
+
+.team__list--tablets .team__member-content-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.team__list--tablets .team__member-text {
+  padding: 0 20%;
 }
