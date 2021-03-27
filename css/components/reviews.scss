@@ -14,7 +14,33 @@ z-index: 1;
   }
 }
 
+
 .reviews {
+
+  &__list {
+    position: relative;
+    min-height: rem(260px);
+    @include tablets {
+      min-height: rem(420px);
+    }
+    @include phones {
+      min-height: rem(450px);
+    }
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s;
+    &--active {
+      opacity: 1;
+    }
+  }
+
   &__switcher {
     display: flex;
     justify-content: center;

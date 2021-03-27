@@ -36,6 +36,10 @@ body {
   position: relative;
 }
 
+.body__scroll {
+  overflow: hidden;
+}
+
 .wrapper {
   width: 100%;
   overflow: hidden;
@@ -502,6 +506,32 @@ footer {
   text-align: center;
 }
 
+.reviews__list {
+  position: relative;
+  min-height: 16.25rem;
+}
+@media screen and (max-width: 768px) {
+  .reviews__list {
+    min-height: 26.25rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews__list {
+    min-height: 28.125rem;
+  }
+}
+.reviews__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+.reviews__item--active {
+  opacity: 1;
+}
 .reviews__switcher {
   display: flex;
   justify-content: center;

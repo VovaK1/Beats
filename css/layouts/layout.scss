@@ -26,6 +26,10 @@ body {
   position: relative;
 }
 
+.body__scroll {
+  overflow: hidden;
+}
+
 .wrapper {
   width: 100%;
   overflow: hidden;

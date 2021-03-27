@@ -2,6 +2,7 @@
 
 const fullMenu = document.querySelector(".nav--full");
 const hamburger = document.querySelector(".hamburger");
+const body = document.querySelector('body');
 
 
 hamburger.addEventListener('click', e => {
@@ -10,9 +11,11 @@ hamburger.addEventListener('click', e => {
   if (fullMenu.classList.contains('nav--full__active')) {
     fullMenu.classList.remove('nav--full__active');
     hamburger.classList.remove('hamburger__active');
+    body.classList.remove('body__scroll');
   } else {
   fullMenu.classList.add('nav--full__active');
   hamburger.classList.add('hamburger__active');
+  body  .classList.add('body__scroll');
   }
 })
 
