@@ -5,6 +5,7 @@
   &__slider {
     position: relative;
     display: flex;
+    justify-content: center;
 
     .bx-wrapper {
       border: none;
@@ -21,14 +22,32 @@
       position: absolute;
       top: 50%;
       z-index: $z-arrow;
+      @include tablets {
+        top: 25%;
+      }
+      @include phones {
+        top: 20%;
+      }
 
       &--prev {
         left: 0;
         transform: translate(rem(-50px), -50%);
+        @include tablets {
+          transform: translate(rem(90px), -50%)
+        }
+        @include phones {
+          transform: translate(rem(10px), -50%)
+        }
       }
       &--next {
         right: 0;
         transform: rotate(-180deg) translate(rem(-50px), 50%);
+        @include tablets {
+          transform: rotate(-180deg) translate(rem(90px), 50%)  
+        }
+        @include phones {
+          transform: rotate(-180deg) translate(rem(10px), 50%)
+        }
       }
     }
   }
