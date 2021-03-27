@@ -907,50 +907,32 @@ footer {
   background: #F8FAF9;
   position: relative;
 }
-.products__list-wrapper {
-  overflow: hidden;
+.products__slider {
+  position: relative;
   display: flex;
 }
-.products__slider {
+.products__slider .bx-wrapper {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+.products__slider-arrow {
+  background: url("../images/products/arrow.svg") center center no-repeat;
+  background-size: contain;
+  height: 1.6875rem;
+  width: 0.84375rem;
+  display: block;
   position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  top: 50%;
+  z-index: 10;
 }
 .products__slider-arrow--prev {
-  position: absolute;
-  bottom: 45%;
-  left: -5%;
-}
-@media screen and (max-width: 768px) {
-  .products__slider-arrow--prev {
-    bottom: 65%;
-    left: 15%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .products__slider-arrow--prev {
-    bottom: 70%;
-    left: 5%;
-  }
+  left: 0;
+  transform: translate(-3.125rem, -50%);
 }
 .products__slider-arrow--next {
-  position: absolute;
-  bottom: 45%;
-  right: -5%;
-}
-@media screen and (max-width: 768px) {
-  .products__slider-arrow--next {
-    bottom: 65%;
-    right: 15%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .products__slider-arrow--next {
-    bottom: 70%;
-    right: 5%;
-  }
+  right: 0;
+  transform: rotate(-180deg) translate(-3.125rem, 50%);
 }
 .products__container {
   display: flex;

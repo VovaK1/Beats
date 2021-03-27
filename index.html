@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beats</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 </head>
 <body>
   <div class="wrapper">
@@ -157,19 +158,13 @@
       <section class="section products">
         <div class="container products__container">
           <div class="products__slider">
-            <a href="#" class="products__slider-arrow products__slider-arrow--prev">
-              <svg width="15" height="29" class="slider__arrows">
-                <use xlink:href="images/sprites/sprite.svg#arrow-left"></use>
-              </svg>
-            </a>
-            <a href="#" class="products__slider-arrow products__slider-arrow--next">
-              <svg width="15" height="29" class="slider__arrows">
-                <use xlink:href="images/sprites/sprite.svg#arrow-right"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="products__list-wrapper">
-              <ul class="products__list">
+            <div class="product__slider__arrows">
+              <a href="#" class="products__slider-arrow products__slider-arrow--prev">
+              </a>
+              <a href="#" class="products__slider-arrow products__slider-arrow--next">
+              </a>
+            </div>
+              <ul class="products__list owl-carousel">
                 <li class="products__item product">
                   <div class="product__container">
                     <div class="product__container-col">
@@ -261,8 +256,99 @@
                     </div>
                   </div>
                 </li>
+                <li class="products__item product">
+                  <div class="product__container">
+                    <div class="product__container-col">
+                      <div class="product__img">
+                        <img src="images/products/beats-red.png" alt="Beats Atlas Silver" class="product__img--elem">
+                      </div>
+                    </div>
+                    <div class="product__container-col product__container-col--right">
+                      <div class="dropdown">
+                        <div class="dropdown__icon">
+                            <a href="#" class="dropdown__icon-link">
+                              <svg class="dropdown__icon-elem">
+                                <use xlink:href="images/sprites/sprite.svg#dropdown"></use>
+                              </svg>
+                            </a>
+                        </div>
+                        <div class="dropdown__chars">
+                          <ul class="chars__list">
+                            <li class="chars__item char">
+                              <div class="char__name">
+                                <svg class="char__name-img">
+                                  <use xlink:href="images/sprites/sprite.svg#bluetooth"></use>
+                                </svg>
+                                <div class="char__name-text">Bluetooth</div>
+                              </div>
+                              <div class="char__value">4.0</div>
+                            </li>
+                            <li class="chars__item char">
+                              <div class="char__name">
+                                <svg class="char__name-img">
+                                  <use xlink:href="images/sprites/sprite.svg#range"></use>
+                                </svg>
+                                <div class="char__name-text">Дальность</div>
+                              </div>
+                              <div class="char__value">12 м</div>
+                            </li>
+                            <li class="chars__item char">
+                              <div class="char__name">
+                                <svg class="char__name-img">
+                                  <use xlink:href="images/sprites/sprite.svg#charge-small"></use>
+                                </svg>
+                                <div class="char__name-text">Зарядка</div>
+                              </div>
+                              <div class="char__value">3 ч</div>
+                            </li>
+                            <li class="chars__item char">
+                              <div class="char__name">
+                                <svg class="char__name-img">
+                                  <use xlink:href="images/sprites/sprite.svg#weight"></use>
+                                </svg>
+                                <div class="char__name-text">Вес</div>
+                              </div>
+                              <div class="char__value">215гр</div>
+                            </li>
+                            <li class="chars__item char">
+                              <div class="char__name">
+                                <svg class="char__name-img">
+                                  <use xlink:href="images/sprites/sprite.svg#guarantee"></use>
+                                </svg>
+                                <div class="char__name-text">Гарантия</div>
+                              </div>
+                              <div class="char__value">1 год</div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div> <!--dropdown-->
+                      <h2 class="product__title">beats solo pro. цвет «красный цитрус»</h2>
+                      <div class="product__desc">
+                        <div class="product__text">
+                          <p>Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему iPhone — они мгновенно подключатся к нему.</p>
+                        </div>
+                        <div class="product__chars">
+                          <div class="product__chars-col">
+                            <div class="product__chars-name"> Зарядка </div>
+                            <div class="product__chars-value"> 2  часа </div>
+                          </div>
+                          <div class="product__chars-col">
+                            <div class="product__chars-name"> Вес </div>
+                            <div class="product__chars-value"> 215 грамм </div>
+                          </div>
+                        </div>
+                        <div class="product__order">
+                          <div class="product__price">14 990 ₽</div>
+                          <div class="product__btn">
+                            <a href="#" class="btn btn--theme--red">Заказать</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
               </ul>
-            </div>
+         </div>
         </div>
       </section>   
       <section class="section team">
@@ -557,6 +643,9 @@
     </ul>
   </nav>
   <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 </html> 
