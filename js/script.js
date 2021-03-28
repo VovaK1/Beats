@@ -1,9 +1,9 @@
-//hamburger
+//hamburger and scroll-to
 
 const fullMenu = document.querySelector(".nav--full");
 const hamburger = document.querySelector(".hamburger");
 const body = document.querySelector('body');
-
+const navList = document.querySelector('.nav__list');
 
 hamburger.addEventListener('click', e => {
   e.preventDefault();
@@ -15,8 +15,15 @@ hamburger.addEventListener('click', e => {
   } else {
   fullMenu.classList.add('nav--full__active');
   hamburger.classList.add('hamburger__active');
-  body  .classList.add('body__scroll');
+  body.classList.add('body__scroll');
   }
+});
+
+navList.addEventListener('click', (e) => {
+  e.preventDefault();
+  const curLink = $(e.currentTarget);
+  const dataValue = curLink.attr('data-scroll-to');
+  console.log(dataValue);
 })
 
 //accordion
