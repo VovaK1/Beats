@@ -3,7 +3,7 @@
 const fullMenu = document.querySelector(".nav--full");
 const hamburger = document.querySelector(".hamburger");
 const body = document.querySelector('body');
-const navList = document.querySelector('.nav__list');
+const navLink = $('.nav__link');
 
 hamburger.addEventListener('click', e => {
   e.preventDefault();
@@ -19,12 +19,26 @@ hamburger.addEventListener('click', e => {
   }
 });
 
-navList.addEventListener('click', (e) => {
+navLink.on('click', (e) => {
   e.preventDefault();
   const curLink = $(e.currentTarget);
   const dataValue = curLink.attr('data-scroll-to');
-  console.log(dataValue);
+  scrollToSection(dataValue); 
+  if ($("body").hasClass('body__scroll')) {
+    hamburger.classList.remove('hamburger__active');
+    body.classList.remove('body__scroll');
+    fullMenu.classList.remove('nav--full__active');
+  }
 })
+
+const scrollToSection = (value) => {
+  const elem = document.querySelector(`[data-section=${value}]`);
+  window.scroll({
+    left: 0,
+    top: elem.offsetTop,
+    behavior: "smooth"
+  });
+}
 
 //accordion
 
