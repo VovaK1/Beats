@@ -1303,8 +1303,8 @@ footer {
 }
 
 .modal {
-  background: #666;
   display: none;
+  background: #666;
 }
 .modal__container {
   background: #fff;
@@ -1320,4 +1320,8 @@ footer {
 
 .input-error {
   border-color: hotpink;
+}
+
+.error-modal {
+  color: red;
 }

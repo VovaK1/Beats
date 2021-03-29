@@ -1,6 +1,6 @@
 .modal {
-background: #666;
 display: none;
+background: #666;
 
 
 &__container {
@@ -19,4 +19,8 @@ display: none;
 
 .input-error {
   border-color: hotpink;
+}
+
+.error-modal {
+  color: red;
 }
