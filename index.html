@@ -7,6 +7,7 @@
   <title>Beats</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 </head>
 <body>
   <div class="wrapper">
@@ -555,40 +556,41 @@
       <section class="order section" data-section="order">
         <div class="container order__container">
           <h1 class="order__title">закажите доставку</h1>
-          <form action="get" class="form">
+          <form class="form">
+            <input type="hidden" name="to" value="somewhere@gmail.com">
             <div class="form__col">
               <div class="form__row">
                 <label for="" class="form__block">
                   <div class="form__title">Имя</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="name">
                 </label>
                 <label for="" class="form__block">
                   <div class="form__title">Телефон</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="phone">
                 </label>
               </div>
               <div class="form__row">
                 <label for="" class="form__block">
                   <div class="form__title">Улица</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="street">
                 </label>
               </div>
               <div class="form__row">
                 <label for="" class="form__block">
                   <div class="form__title">Дом</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="home">
                 </label>
                 <label for="" class="form__block">
                   <div class="form__title">Корпус</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="part">
                 </label>
                 <label for="" class="form__block">
                   <div class="form__title">Квартира</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="flat">
                 </label>
                 <label for="" class="form__block">
                   <div class="form__title">Этаж</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="floor">
                 </label>
               </div>
             </div>
@@ -596,7 +598,7 @@
               <div class="form__row">
                 <label for="" class="form__block">
                   <div class="form__title">Комментарий</div>
-                  <textarea type="text" class="form__input form__input--textarea"></textarea>
+                  <textarea type="text" name="comment" class="form__input form__input--textarea"></textarea>
                 </label>
               </div>
               <div class="form__controls">
@@ -662,6 +664,14 @@
       </section>
     </div> <!--maincontent-->
   </div> <!--wrapper-->
+  <div class="modal fancybox__content" id="modal">
+    <div class="modal__container">
+      <div class="modal__content">Cообщение отправлено</div>
+      <div class="modal__button-container">
+        <a href="" class="btn btn--theme--red">Закрыть</a>
+      </div>
+    </div>
+  </div>
 
   <nav class="fixed-menu">
     <ul class="fixed-menu__list">
@@ -679,8 +689,10 @@
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/slideshow.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 </html> 

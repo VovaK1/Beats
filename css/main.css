@@ -1301,3 +1301,23 @@ footer {
 .team__list--tablets .team__member-text {
   padding: 0 20%;
 }
+
+.modal {
+  background: #666;
+  display: none;
+}
+.modal__container {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.1875rem 3.4375rem;
+}
+.modal__content {
+  font-size: 1.125rem;
+  margin-bottom: 1.125rem;
+}
+
+.input-error {
+  border-color: hotpink;
+}
