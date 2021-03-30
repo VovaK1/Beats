@@ -1325,3 +1325,71 @@ footer {
 .error-modal {
   color: red;
 }
+
+.colors {
+  display: inline-flex;
+  flex-direction: row;
+  background: url("../images/colors/background.jpg") center center no-repeat;
+  background-size: cover;
+}
+.colors__title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  text-align: left;
+  padding-top: 6.875rem;
+  padding-left: 5rem;
+}
+.colors__list {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.colors__item {
+  display: flex;
+  flex-direction: row;
+}
+
+.color__title-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100px;
+}
+.color__title-wrapper--grey {
+  background: #666;
+}
+.color__title-wrapper--red {
+  background: #E01F3D;
+}
+.color__title-wrapper--black {
+  background: #151515;
+}
+.color__title {
+  font-size: 36px;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Alegreya Sans", sans-serif;
+  transform: rotate(-90deg);
+}
+.color__content {
+  background: rgba(51, 53, 55, 0.9);
+  padding: 1.9375rem 2.375rem;
+  color: #fff;
+  font-family: "Alegreya Sans", sans-serif;
+  width: 32.75rem;
+}
+@media screen and (max-width: 768px) {
+  .color__content {
+    width: 29.5625rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .color__content {
+    width: 24.375rem;
+  }
+}

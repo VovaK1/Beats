@@ -1,0 +1,26 @@
+.colors {
+  display: inline-flex;
+  flex-direction: row;
+
+  background: url("../images/colors/background.jpg") center center no-repeat;
+  background-size: cover;
+
+  &__title {
+    @include sectionTitle;
+    color: #fff;
+    text-align: left;
+    padding-top: rem(110px);
+    padding-left: rem(80px);
+  }
+
+  &__list {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+  }
+}

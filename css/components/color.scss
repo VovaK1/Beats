@@ -1,0 +1,40 @@
+.color {
+  &__title-wrapper {
+    height:  100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100px;
+     
+      &--grey {
+      background: #666;
+    }
+    &--red {
+      background: $red;
+    }
+    &--black {
+      background: #151515;
+    }
+  }
+  &__title {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Alegreya Sans', sans-serif;
+    transform: rotate(-90deg);
+  }
+
+  &__content {
+  background: rgba($color: #333537, $alpha: 0.9);
+  padding: rem(31px) rem(38px);
+  color: #fff;
+  font-family: 'Alegreya Sans', sans-serif;
+  width: rem(524px);
+  @include tablets {
+   width: rem(473px)
+  }
+  @include phones {
+    width: rem(390px);
+  }
+  }
+}
