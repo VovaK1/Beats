@@ -1378,7 +1378,10 @@ footer {
   color: #fff;
   font-weight: 700;
   font-family: "Alegreya Sans", sans-serif;
-  transform: rotate(-90deg);
+  transform: rotate(270deg);
+  white-space: nowrap;
+  align-self: center;
+  padding-right: 12.5rem;
 }
 .color__content {
   background: rgba(51, 53, 55, 0.9);
@@ -1386,19 +1389,10 @@ footer {
   font-family: "Alegreya Sans", sans-serif;
   width: 0;
   overflow: hidden;
+  transition: width 0.5s;
 }
 .color__content-block {
   padding: 1.9375rem 2.375rem;
-}
-@media screen and (max-width: 768px) {
-  .color__content {
-    width: 29.5625rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .color__content {
-    width: 24.375rem;
-  }
 }
 
 .color--active .color__content {

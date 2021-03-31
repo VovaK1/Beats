@@ -23,7 +23,10 @@
     color: #fff;
     font-weight: 700;
     font-family: 'Alegreya Sans', sans-serif;
-    transform: rotate(-90deg);
+    transform: rotate(270deg);
+    white-space: nowrap;
+    align-self: center;
+    padding-right: rem(200px);
   }
 
   &__content {
@@ -32,19 +35,12 @@
   font-family: 'Alegreya Sans', sans-serif;
   width: 0;
   overflow: hidden;
-  // position: absolute;
-  // left: 100%;
+  transition: width 0.5s;
   
   &-block {
     padding: rem(31px) rem(38px);
   }
-  @include tablets {
-   width: rem(473px)
-  }
-  @include phones {
-    width: rem(390px);
-  }
-  }
+}
 }
 
 .color--active .color__content {
