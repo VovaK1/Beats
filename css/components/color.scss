@@ -1,12 +1,14 @@
 .color {
+  position: relative;
+
   &__title-wrapper {
     height:  100%;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     width: 100px;
-     
-      &--grey {
+    
+    &--grey {
       background: #666;
     }
     &--red {
@@ -26,10 +28,16 @@
 
   &__content {
   background: rgba($color: #333537, $alpha: 0.9);
-  padding: rem(31px) rem(38px);
   color: #fff;
   font-family: 'Alegreya Sans', sans-serif;
-  width: rem(524px);
+  width: 0;
+  overflow: hidden;
+  // position: absolute;
+  // left: 100%;
+  
+  &-block {
+    padding: rem(31px) rem(38px);
+  }
   @include tablets {
    width: rem(473px)
   }
@@ -37,4 +45,8 @@
     width: rem(390px);
   }
   }
+}
+
+.color--active .color__content {
+  width: rem(524px);
 }

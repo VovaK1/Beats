@@ -1327,8 +1327,9 @@ footer {
 }
 
 .colors {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
+  justify-content: space-between;
   background: url("../images/colors/background.jpg") center center no-repeat;
   background-size: cover;
 }
@@ -1353,6 +1354,9 @@ footer {
   flex-direction: row;
 }
 
+.color {
+  position: relative;
+}
 .color__title-wrapper {
   height: 100%;
   display: flex;
@@ -1378,10 +1382,13 @@ footer {
 }
 .color__content {
   background: rgba(51, 53, 55, 0.9);
-  padding: 1.9375rem 2.375rem;
   color: #fff;
   font-family: "Alegreya Sans", sans-serif;
-  width: 32.75rem;
+  width: 0;
+  overflow: hidden;
+}
+.color__content-block {
+  padding: 1.9375rem 2.375rem;
 }
 @media screen and (max-width: 768px) {
   .color__content {
@@ -1392,4 +1399,8 @@ footer {
   .color__content {
     width: 24.375rem;
   }
+}
+
+.color--active .color__content {
+  width: 32.75rem;
 }
