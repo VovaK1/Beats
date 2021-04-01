@@ -336,6 +336,30 @@ footer {
   background: #E01F3D;
 }
 
+.btn__close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.btn__close:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 0px);
+  transform-origin: left top;
+}
+.btn__close:nth-child(2) {
+  transform: rotate(-45deg) translate(10px, -10px);
+  transform-origin: left top;
+}
+.btn__close-plank {
+  display: block;
+  background: #fff;
+  height: 4px;
+  border-radius: 10px;
+  transition: all 0.2s;
+  width: 15px;
+}
+
 .why {
   position: relative;
   z-index: 5;
@@ -1328,8 +1352,8 @@ footer {
 
 .colors {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  position: relative;
+  justify-content: initial;
   background: url("../images/colors/background.jpg") center center no-repeat;
   background-size: cover;
 }

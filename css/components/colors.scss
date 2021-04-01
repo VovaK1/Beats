@@ -1,7 +1,7 @@
 .colors {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  position: relative;
+  justify-content: initial;
 
   background: url("../images/colors/background.jpg") center center no-repeat;
   background-size: cover;

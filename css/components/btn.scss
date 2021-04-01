@@ -29,3 +29,31 @@
     }
   }
 }
+
+
+.btn__close {
+
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  // background: transparent;
+  display: flex;
+  flex-direction: column;
+  &:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 0px) ;
+    transform-origin: left top;
+  }
+  &:nth-child(2) {
+    transform: rotate(-45deg) translate(10px, -10px) ;
+    transform-origin: left top;
+  }
+  
+  &-plank {
+    display: block;
+    background: #fff;
+    height: 4px;  
+    border-radius: 10px;
+    transition: all 0.2s;
+    width: 15px;
+  }
+}

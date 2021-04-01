@@ -4,7 +4,7 @@ const mesureWidth = () => {
   return 500;
 }
 
-const openItem = item => {
+const openColor = item => {
 const hiddenContent = item.find('.color__content');
 
 const reqWidth = mesureWidth();
@@ -17,5 +17,5 @@ $(colorTitle).on('click', e => {
   const $this = $(e.currentTarget);
   const item = $this.closest('.color');
 
-  openItem(item);
+  openColor(item);
 })
