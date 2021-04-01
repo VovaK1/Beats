@@ -1345,13 +1345,14 @@ footer {
   padding-left: 5rem;
 }
 .colors__list {
-  height: 100%;
   display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 .colors__item {
   display: flex;
-  flex-direction: row;
 }
 
 .color {
@@ -1363,6 +1364,8 @@ footer {
   align-items: flex-end;
   justify-content: center;
   width: 100px;
+  position: relative;
+  cursor: pointer;
 }
 .color__title-wrapper--grey {
   background: #666;
@@ -1390,11 +1393,8 @@ footer {
   width: 0;
   overflow: hidden;
   transition: width 0.5s;
+  position: relative;
 }
 .color__content-block {
   padding: 1.9375rem 2.375rem;
-}
-
-.color--active .color__content {
-  width: 32.75rem;
 }

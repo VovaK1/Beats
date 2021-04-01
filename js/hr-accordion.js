@@ -1,18 +1,21 @@
-const color = $('.color');
+const colorTitle = $('.color__title-wrapper');
 
-const openItem = item => {
-  item.addClass('color--active');
-};
-
-const closeItem = item => {
-  item.removeClass('color--active');
+const mesureWidth = () => {
+  return 500;
 }
 
-$(color).hover(function () {
-    // over
-    openItem($(this));
-  }, function () {
-    // out
-    closeItem($(this));
-  }
-);
+const openItem = item => {
+const hiddenContent = item.find('.color__content');
+
+const reqWidth = mesureWidth();
+hiddenContent.width(reqWidth);
+}
+
+$(colorTitle).on('click', e => {
+  e.preventDefault();
+
+  const $this = $(e.currentTarget);
+  const item = $this.closest('.color');
+
+  openItem(item);
+})

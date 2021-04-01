@@ -7,6 +7,8 @@
     align-items: flex-end;
     justify-content: center;
     width: 100px;
+    position: relative;
+    cursor: pointer;
     
     &--grey {
       background: #666;
@@ -36,13 +38,10 @@
   width: 0;
   overflow: hidden;
   transition: width 0.5s;
+  position: relative;
   
   &-block {
     padding: rem(31px) rem(38px);
   }
 }
-}
-
-.color--active .color__content {
-  width: rem(524px);
 }
