@@ -1363,7 +1363,7 @@ footer {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  width: 100px;
+  width: 6.25rem;
   position: relative;
   cursor: pointer;
 }
@@ -1403,19 +1403,6 @@ footer {
   position: absolute;
   top: 20px;
   right: 25px;
-  background: transparent;
-  height: 30px;
-  width: 30px;
-}
-.color__close:nth-child(1) {
-  transform: rotate(45deg);
-}
-.color__close:nth-child(2) {
-  transform: rotate(-90deg);
-}
-.color__close-plank {
-  display: block;
-  background: #fff;
-  height: 30px;
-  width: 3px;
+  height: 25px;
+  width: 25px;
 }

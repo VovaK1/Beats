@@ -6,7 +6,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    width: 100px;
+    width: rem(100px);
     position: relative;
     cursor: pointer;
     
@@ -50,20 +50,6 @@
   position: absolute;
   top: 20px;
   right: 25px;
-  background: transparent;
-  height: 30px;
-  width: 30px;
-  &:nth-child(1) {
-    transform: rotate(45deg) ;
-  }
-  &:nth-child(2) {
-    transform: rotate(-90deg);
-  }
-  
-  &-plank {
-    display: block;
-    background: #fff;
-    height: 30px;  
-    width: 3px;
-  }
+  height: 25px;
+  width: 25px;
 }
