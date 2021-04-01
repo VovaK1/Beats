@@ -336,30 +336,6 @@ footer {
   background: #E01F3D;
 }
 
-.btn__close {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  display: flex;
-  flex-direction: column;
-}
-.btn__close:nth-child(1) {
-  transform: rotate(45deg) translate(10px, 0px);
-  transform-origin: left top;
-}
-.btn__close:nth-child(2) {
-  transform: rotate(-45deg) translate(10px, -10px);
-  transform-origin: left top;
-}
-.btn__close-plank {
-  display: block;
-  background: #fff;
-  height: 4px;
-  border-radius: 10px;
-  transition: all 0.2s;
-  width: 15px;
-}
-
 .why {
   position: relative;
   z-index: 5;
@@ -1421,4 +1397,25 @@ footer {
 }
 .color__content-block {
   padding: 1.9375rem 2.375rem;
+}
+
+.color__close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: transparent;
+  height: 30px;
+  width: 30px;
+}
+.color__close:nth-child(1) {
+  transform: rotate(45deg);
+}
+.color__close:nth-child(2) {
+  transform: rotate(-90deg);
+}
+.color__close-plank {
+  display: block;
+  background: #fff;
+  height: 30px;
+  width: 3px;
 }
