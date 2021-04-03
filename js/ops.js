@@ -1,16 +1,21 @@
 const sections = $('section');
 const display = $('.maincontent');
 const sideMenu = $('.fixed-menu');
+const menuItems = sideMenu.find('.fixed-menu__item');
 
 sections.first().addClass('active');
 
 let inScroll = false;
 
 const countSectionPosition = sectionEq => {
-  return sectionEq * -100;
+  const position = sectionEq * -100;
+  if (isNaN(position)) {
+    return 0;
+  }
+  return position;
 };
 
-const changeMenuTheme = (sectionEq)=> {
+const changeMenuTheme = (sectionEq) => {
   const currentSection = sections.eq(sectionEq);
   const menuTheme = currentSection.attr('data-sidemenu-theme');
 
@@ -19,6 +24,10 @@ const changeMenuTheme = (sectionEq)=> {
   } else {
     sideMenu.removeClass('fixed-menu--white');
   }
+};
+
+const resetActiveClassForItem = (items, itemEq, activeClass) => {
+  items.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
 }
 
 const performTransition = (sectionEq) => {
@@ -32,15 +41,16 @@ const performTransition = (sectionEq) => {
     transform: `translateY(${position}%)`
   });
   }
+  resetActiveClassForItem(sections, sectionEq, 'active' );
 
-  sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
-
+  const transitionOver = 1000;
+  const mouseInertiaOver = 300;
 
 
   setTimeout(() => {
     inScroll = false;
-    $('.fixed-menu').find('.fixed-menu__item').eq(sectionEq).addClass('fixed-menu__item--active').siblings().removeClass('fixed-menu__item--active');
-  }, 1300)
+    resetActiveClassForItem(menuItems, sectionEq, 'fixed-menu__item--active');
+  }, transitionOver + mouseInertiaOver);
 }
 
 const scrollViewport = direction => {
@@ -67,8 +77,9 @@ $(window).on('wheel', e => {
 
 $(window).on('keydown', e => {
   const tagName = e.target.tagName.toLowerCase();
+  const userTypingInInputs = tagName == 'input' || tagName == 'textarea';
 
-  if (tagName !== 'input' && tagName !== 'textarea') {
+  if (userTypingInInputs) return;
     switch (e.keyCode) {
       case 40:
         scrollViewport("next");
@@ -77,7 +88,7 @@ $(window).on('keydown', e => {
         scrollViewport("prev");
         break;
     }
-  }
+
 });
 
 $("[data-scroll-to]").click(e => {
@@ -88,4 +99,10 @@ $("[data-scroll-to]").click(e => {
   const reqSection = $(`[data-section=${target}]`);
 
   performTransition(reqSection.index());
+});
+
+$("body").swipe( {
+  swipe:function(event, direction, ) {
+    alert(direction); 
+  }
 })
