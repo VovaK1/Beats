@@ -43,8 +43,14 @@ body {
 .wrapper {
   width: 100%;
   overflow: hidden;
-  min-height: 100%;
+  height: 100%;
   position: relative;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
+  will-change: transform;
 }
 
 .container {
@@ -920,6 +926,10 @@ footer {
   transform: translate(-50%, -50%);
 }
 
+.fixed-menu--white .fixed-menu__link:before {
+  background: #fff;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -1399,10 +1409,12 @@ footer {
   padding: 1.9375rem 2.375rem;
 }
 
-.color__close {
+.color__close-icon {
   position: absolute;
   top: 20px;
   right: 25px;
-  height: 25px;
-  width: 25px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  cursor: pointer;
 }
