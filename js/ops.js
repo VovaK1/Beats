@@ -3,6 +3,8 @@ const display = $('.maincontent');
 const sideMenu = $('.fixed-menu');
 const menuItems = sideMenu.find('.fixed-menu__item');
 
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
 sections.first().addClass('active');
 
 let inScroll = false;
@@ -53,43 +55,53 @@ const performTransition = (sectionEq) => {
   }, transitionOver + mouseInertiaOver);
 }
 
-const scrollViewport = direction => {
+const viewportScroller = () => {
   const activeSection = sections.filter('.active');
   const nextSection = activeSection.next();
   const prevSection = activeSection.prev();
 
-  if (direction === "next" && nextSection.length) {
-    performTransition(nextSection.index())
-  } if (direction === "prev" && prevSection.length) {
-    performTransition(prevSection.index())
+  return {
+    next() {
+      if ( nextSection.length) {
+        performTransition(nextSection.index())
+    }}, 
+    prev() {
+     if ( prevSection.length) {
+      performTransition(prevSection.index())
+     }
+    }
   }
 }
 
 $(window).on('wheel', e => {
   const deltaY = e.originalEvent.deltaY;
+  const scroller = viewportScroller();
 
   if(deltaY > 0) {
-    scrollViewport("next");
+    scroller.next();
   } if (deltaY < 0) {
-    scrollViewport("prev");
+    scroller.prev();
   }
 });
 
 $(window).on('keydown', e => {
   const tagName = e.target.tagName.toLowerCase();
   const userTypingInInputs = tagName == 'input' || tagName == 'textarea';
+  const scroller = viewportScroller();
 
   if (userTypingInInputs) return;
     switch (e.keyCode) {
       case 40:
-        scrollViewport("next");
+        scroller.next();
         break;
       case 38:
-        scrollViewport("prev");
+        scroller.prev();
         break;
     }
 
 });
+
+$('.wrapper').on('touchmove', e => e.preventDefault());
 
 $("[data-scroll-to]").click(e => {
   e.preventDefault();
@@ -101,8 +113,16 @@ $("[data-scroll-to]").click(e => {
   performTransition(reqSection.index());
 });
 
-$("body").swipe( {
-  swipe:function(event, direction, ) {
-    alert(direction); 
-  }
-})
+if (isMobile) {
+  $("body").swipe( {
+    swipe:function(event,direction) {
+      const scroller = viewportScroller();
+      let scrollDirection = "";
+  
+      if (direction == "up") scrollDirection = "next";
+      if (direction == "down") scrollDirection = "prev";
+  
+      scroller[scrollDirection]();
+    }
+  })
+}
