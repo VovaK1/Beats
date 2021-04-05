@@ -53,11 +53,12 @@
     const newPositionPercent = (clickedPosition / soundBarWidth) * 100;
     if (newPositionPercent < 100) {
       video.get(0).volume = newPositionPercent / 100 ;
-    
       playerVolumePlaybackLine.css({
         width: `${newPositionPercent}%`
       });
     }
+
+    console.log('changeVolume')
   };
 
   const toggleSound = (e) => {
@@ -74,6 +75,7 @@
         width: `${startVolume}%`
       });
     }
+    console.log('toggleSound')
   }
 
 
@@ -84,6 +86,8 @@
 // playback
 
 const handleDuration = (e) => {
+const eTarget = $(e.target);
+  if (eTarget.hasClass('player__playback-button')) return;
   const barWidth = playerPlayback.width();
   const circleWidth = playerPlaybackButton.width();
   const offsetX = e.offsetX;
@@ -92,6 +96,8 @@ const handleDuration = (e) => {
 
 
   video.get(0).currentTime = newTime;
+
+  console.log(offsetX)
 }
 
 const timeUpdate = () => {
