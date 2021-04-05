@@ -48,6 +48,8 @@
   // sound 
 
   const changeVolume = (e) => {
+    const eTarget = $(e.target);
+    if (eTarget.hasClass('player__volume-playback-button')) return;
     const clickedPosition =  e.originalEvent.layerX;
     const soundBarWidth = playerVolumePlayback.width();
     const newPositionPercent = (clickedPosition / soundBarWidth) * 100;
@@ -96,8 +98,6 @@ const eTarget = $(e.target);
 
 
   video.get(0).currentTime = newTime;
-
-  console.log(offsetX)
 }
 
 const timeUpdate = () => {

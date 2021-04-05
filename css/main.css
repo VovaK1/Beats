@@ -815,11 +815,6 @@ footer {
     padding-bottom: 9.375rem;
   }
 }
-.contacts__map-img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
 .contacts__info {
   display: flex;
   justify-content: space-between;
