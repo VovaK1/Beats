@@ -107,4 +107,38 @@
         });
       }
 
+      //sound 
+
+      $('.player__volume-icon').click(e => {
+        e.preventDefault();
+
+        if (player.isMuted()) {
+          player.unMute();
+          if ($('.player__volume-playback-line').width() == 0) {
+            $('.player__volume-playback-line').css({
+              width: '50%'
+            })
+          }
+        } else {
+          player.mute();
+          $('.player__volume-playback-line').css({
+            width: '0'
+          })
+        }
+      });
+
+      $('.player__volume-playback').click(e => {
+        const soundBar = $(e.currentTarget);
+        const clickedPosition = e.originalEvent.layerX;
+        const soundBarWidth = parseInt(soundBar.width());
+        const newSoundPositionPercent = (clickedPosition / soundBarWidth ) * 100;
+        newPositionPlaybackSound = (player.getVolume() / 100) * newSoundPositionPercent;
+
+        $('.player__volume-playback-line').css({
+          width: `${newSoundPositionPercent}%`
+        });
+
+        player.setVolume(newPositionPlaybackSound);
+      });
+
     eventsInit();

@@ -1509,11 +1509,11 @@ footer {
   right: 0;
 }
 .player__playback {
-  height: 4px;
+  height: 0.25rem;
   width: 27.5rem;
   background: #333;
   position: relative;
-  margin-left: 2.5rem;
+  margin-left: 3.125rem;
   cursor: pointer;
 }
 .player__playback-line {
@@ -1530,6 +1530,38 @@ footer {
   background: #E01F3D;
   right: 0%;
   top: -100%;
+}
+.player__volume {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 5rem;
+}
+.player__volume-icon {
+  cursor: pointer;
+}
+.player__volume-playback {
+  height: 0.3125rem;
+  width: 3.125rem;
+  background: #333;
+  position: relative;
+  cursor: pointer;
+}
+.player__volume-playback-line {
+  position: relative;
+  background: #E01F3D;
+  height: 100%;
+  width: 50%;
+}
+.player__volume-playback-button {
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #E01F3D;
+  top: -80%;
+  right: -10%;
 }
 .player__duration {
   color: #fff;
