@@ -1,0 +1,28 @@
+.colors {
+  display: flex;
+  position: relative;
+  justify-content: initial;
+
+  background: url("../images/colors/background.jpg") center center no-repeat;
+  background-size: cover;
+
+  &__title {
+    @include sectionTitle;
+    color: #fff;
+    text-align: left;
+    padding-top: rem(110px);
+    padding-left: rem(80px);
+  }
+
+  &__list {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  &__item {
+    display: flex;
+  }
+}

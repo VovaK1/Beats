@@ -43,8 +43,14 @@ body {
 .wrapper {
   width: 100%;
   overflow: hidden;
-  min-height: 100%;
+  height: 100%;
   position: relative;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
+  will-change: transform;
 }
 
 .container {
@@ -89,6 +95,7 @@ footer {
   background: url("../images/hero/beats.png") left 80% center no-repeat;
   background-color: #f5f5f5;
   position: relative;
+  height: 100%;
 }
 @media screen and (max-width: 768px) {
   .hero {
@@ -808,11 +815,6 @@ footer {
     padding-bottom: 9.375rem;
   }
 }
-.contacts__map-img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
 .contacts__info {
   display: flex;
   justify-content: space-between;
@@ -918,6 +920,10 @@ footer {
   left: 50%;
   border-radius: 50%;
   transform: translate(-50%, -50%);
+}
+
+.fixed-menu--white .fixed-menu__link:before {
+  background: #fff;
 }
 
 .footer {
@@ -1324,4 +1330,234 @@ footer {
 
 .error-modal {
   color: red;
+}
+
+.colors {
+  display: flex;
+  position: relative;
+  justify-content: initial;
+  background: url("../images/colors/background.jpg") center center no-repeat;
+  background-size: cover;
+}
+.colors__title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  text-align: left;
+  padding-top: 6.875rem;
+  padding-left: 5rem;
+}
+.colors__list {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.colors__item {
+  display: flex;
+}
+
+.color {
+  position: relative;
+}
+.color__title-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 6.25rem;
+  position: relative;
+  cursor: pointer;
+}
+.color__title-wrapper--grey {
+  background: #666;
+}
+.color__title-wrapper--red {
+  background: #E01F3D;
+}
+.color__title-wrapper--black {
+  background: #151515;
+}
+.color__title {
+  font-size: 36px;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Alegreya Sans", sans-serif;
+  transform: rotate(270deg);
+  white-space: nowrap;
+  align-self: center;
+  padding-right: 12.5rem;
+}
+.color__content {
+  background: rgba(51, 53, 55, 0.9);
+  color: #fff;
+  font-family: "Alegreya Sans", sans-serif;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.5s;
+  position: relative;
+}
+.color__content-block {
+  padding: 1.9375rem 2.375rem;
+}
+
+.color__close-icon {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.player {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.player-section {
+  padding: 3.625rem 0;
+}
+.player__wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.player-section__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.player__container {
+  width: 41.25rem;
+  min-height: 25rem;
+  display: flex;
+  justify-content: center;
+}
+.player__title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+.player__splash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("../images/player/Pharell.png") center center/cover no-repeat;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player.active .player__splash {
+  display: none;
+}
+.player__controls {
+  position: absolute;
+  height: 2.1875rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #151515;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.player__start {
+  border: 10px solid #151515;
+  border-left-color: #fff;
+  border-right-width: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.player.paused .player__start {
+  width: 0.75rem;
+  height: 1rem;
+  border: none;
+  background: none;
+}
+.player.paused .player__start:before, .player.paused .player__start:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  width: 4px;
+}
+.player.paused .player__start:before {
+  left: 0;
+}
+.player.paused .player__start:after {
+  right: 0;
+}
+.player__playback {
+  height: 0.25rem;
+  width: 27.5rem;
+  background: #333;
+  position: relative;
+  margin-left: 3.125rem;
+  cursor: pointer;
+}
+.player__playback-line {
+  position: relative;
+  background: #E01F3D;
+  width: 0;
+  height: 100%;
+}
+.player__playback-button {
+  position: absolute;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  background: #E01F3D;
+  right: 0%;
+  top: -100%;
+}
+.player__volume {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 5rem;
+}
+.player__volume-icon {
+  cursor: pointer;
+}
+.player__volume-playback {
+  height: 0.3125rem;
+  width: 3.125rem;
+  background: #333;
+  position: relative;
+  cursor: pointer;
+}
+.player__volume-playback-line {
+  position: relative;
+  background: #E01F3D;
+  height: 100%;
+  width: 50%;
+}
+.player__volume-playback-button {
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #E01F3D;
+  top: -80%;
+  right: -10%;
+}
+.player__duration {
+  color: #fff;
 }

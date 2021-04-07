@@ -40,3 +40,9 @@
     }
   }
 }
+
+.fixed-menu--white .fixed-menu__link  {
+  &:before {
+    background: #fff;
+}
+}

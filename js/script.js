@@ -19,26 +19,26 @@ hamburger.addEventListener('click', e => {
   }
 });
 
-navLink.on('click', (e) => {
-  e.preventDefault();
-  const curLink = $(e.currentTarget);
-  const dataValue = curLink.attr('data-scroll-to');
-  scrollToSection(dataValue); 
-  if ($("body").hasClass('body__scroll')) {
-    hamburger.classList.remove('hamburger__active');
-    body.classList.remove('body__scroll');
-    fullMenu.classList.remove('nav--full__active');
-  }
-})
+// navLink.on('click', (e) => {
+//   e.preventDefault();
+//   const curLink = $(e.currentTarget);
+//   const dataValue = curLink.attr('data-scroll-to');
+//   scrollToSection(dataValue); 
+//   if ($("body").hasClass('body__scroll')) {
+//     hamburger.classList.remove('hamburger__active');
+//     body.classList.remove('body__scroll');
+//     fullMenu.classList.remove('nav--full__active');
+//   }
+// })
 
-const scrollToSection = (value) => {
-  const elem = document.querySelector(`[data-section=${value}]`);
-  window.scroll({
-    left: 0,
-    top: elem.offsetTop,
-    behavior: "smooth"
-  });
-}
+// const scrollToSection = (value) => {
+//   const elem = document.querySelector(`[data-section=${value}]`);
+//   window.scroll({
+//     left: 0,
+//     top: elem.offsetTop,
+//     behavior: "smooth"
+//   });
+// }
 
 //accordion
 
