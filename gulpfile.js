@@ -59,7 +59,8 @@ task('server', () => {
 const styles = [
   "src/styles/layouts/normalize.css",
   "node_modules/bxslider/dist/jquery.bxslider.css",
-  "src/styles/main.scss"
+  "src/styles/main.scss",
+  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css'
 ]
 
 
@@ -81,6 +82,7 @@ task('styles', () => {
 const JScripts = [
   'src/js-libs/*.js',
   "node_modules/bxslider/dist/jquery.bxslider.min.js",
+  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
   'src/js/*.js'
 ]
 

@@ -22,6 +22,7 @@
   "devDependencies": {
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
+    "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^2.26.14",
     "bxslider": "^4.2.14",
     "cross-env": "^7.0.3",
