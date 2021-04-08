@@ -58,6 +58,7 @@ task('server', () => {
 
 const styles = [
   "src/styles/layouts/normalize.css",
+  "node_modules/bxslider/dist/jquery.bxslider.css",
   "src/styles/main.scss"
 ]
 
@@ -79,6 +80,7 @@ task('styles', () => {
 
 const JScripts = [
   'src/js-libs/*.js',
+  "node_modules/bxslider/dist/jquery.bxslider.min.js",
   'src/js/*.js'
 ]
 
