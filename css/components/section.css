@@ -1,7 +1,0 @@
-.section {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  min-height: 650px;
-  justify-content: center;
-}

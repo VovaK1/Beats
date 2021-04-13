@@ -1,0 +1,87 @@
+//variables
+$baseFontSize: 16px;
+$containerWidth: 56.875rem;
+
+//mixins
+@mixin  sectionTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+//z-indexes
+$z-arrow: 10;
+$z-fixed-menu: 100;
+$z-nav-full: 1000;
+$z-hamburger: 2000;
+
+//colors
+$red: #E01F3D;
+
+//media 
+@import "layouts/media";
+
+//normalize
+@import url('./layouts/normalize.css');
+
+//fonts 
+@font-face {
+  src: url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap');
+  font-family: 'Alegreya Sans', sans-serif;
+}
+@font-face {
+  src: url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+  font-family:  'Play', sans-serif;
+}
+
+
+@import "layouts/layout";
+@import "blocks/hero";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/hamburger";
+@import "blocks/features";
+@import "blocks/feature";
+@import "blocks/btn";
+@import "blocks/why";
+@import "blocks/advantages";
+@import "blocks/advantage";
+@import "blocks/section";
+@import "blocks/reviews";
+@import "blocks/interactive-avatar";
+@import "blocks/order";
+@import "blocks/form";
+@import "blocks/radio";
+@import "blocks/contacts";
+@import "blocks/socials";
+@import "blocks/fixed-menu";
+@import "blocks/footer";
+@import "blocks/products";
+@import "blocks/product";
+@import "blocks/dropdown";
+@import "blocks/chars";
+@import "blocks/char";
+@import "blocks/team";
+@import "blocks/modal";
+@import "blocks/colors";
+@import "blocks/color";
+@import "blocks/player";
+
+
+
+
+
