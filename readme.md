@@ -1,5 +1,3 @@
 # This is a my second project for LoftSchool
 
-+ How SASS works
-+ How GIT works
-+ Basics of JavaScript
+Responsive layout of a single-page web application with a few js-libraries.
