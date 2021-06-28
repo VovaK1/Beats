@@ -1,4 +1,4 @@
-# This is a my second project for LoftSchool
+# This is a my second project
 
 Responsive layout of a single-page web application with a few js-libraries.
 
